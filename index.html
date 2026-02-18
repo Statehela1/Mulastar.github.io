@@ -147,6 +147,29 @@
 
         </div>
         </section>
+    <section class="py-12 bg-blue-600 text-white px-5 rounded-3xl max-w-4xl mx-auto my-10 shadow-xl">
+    <div class="text-center mb-8">
+        <h3 class="text-2xl font-bold">Estimate Your Daily Earnings</h3>
+        <p class="text-blue-100">See how much you can make with Mulastar!</p>
+    </div>
+    <div class="bg-white text-gray-800 p-6 rounded-xl">
+        <label class="block text-sm font-bold mb-2">Number of TikTok Videos Watched:</label>
+        <input type="range" min="1" max="50" value="10" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600" id="calcRange">
+        <div class="mt-6 p-4 bg-blue-50 rounded-lg text-center border-2 border-dashed border-blue-200">
+            <p class="text-sm text-gray-500">Estimated Daily Profit:</p>
+            <h2 class="text-4xl font-black text-blue-600">KES <span id="calcResult">1,500</span></h2>
+        </div>
+    </div>
+</section>
+
+<script>
+    const range = document.getElementById('calcRange');
+    const result = document.getElementById('calcResult');
+    range.addEventListener('input', (e) => {
+        result.innerText = (e.target.value * 150).toLocaleString(); // Simple math: 150 per video
+    });
+</script>
+
      <section class="py-16 max-w-4xl mx-auto px-5">
     <h3 class="text-3xl font-bold text-center mb-10">How to Create Mulastar Account</h3>
     <div class="space-y-6">
@@ -284,6 +307,37 @@
     <footer class="bg-white shadow-inner mt-16 py-6 text-center text-gray-500 text-sm">
     &copy; 2026 Mulastar Agencies. All rights reserved.
 </footer>
+<div id="payout-toast" class="fixed bottom-24 left-6 bg-white shadow-2xl rounded-lg p-4 border-l-4 border-green-500 transition-all duration-500 transform translate-y-20 opacity-0 z-50 flex items-center gap-3">
+    <div class="bg-green-100 text-green-600 w-10 h-10 rounded-full flex items-center justify-center">
+        <i class="fas fa-check"></i>
+    </div>
+    <div>
+        <p class="text-xs text-gray-500 uppercase font-bold">New Withdrawal</p>
+        <p class="text-sm font-bold text-gray-800" id="payout-detail">User @Amos just withdrew KES 2,450</p>
+    </div>
+</div>
+
+<script>
+    const payouts = [
+        "User @Sarah_UG just withdrew UGX 45,000",
+        "User @Kofi_GH just withdrew GHS 120",
+        "User @Julyus just withdrew KES 1,800",
+        "User @Musa_MW just withdrew MWK 15,000",
+        "User @Blessing just withdrew XAF 8,000"
+    ];
+
+    function showToast() {
+        const toast = document.getElementById('payout-toast');
+        const detail = document.getElementById('payout-detail');
+        detail.innerText = payouts[Math.floor(Math.random() * payouts.length)];
+        
+        toast.classList.remove('translate-y-20', 'opacity-0');
+        setTimeout(() => {
+            toast.classList.add('translate-y-20', 'opacity-0');
+        }, 5000);
+    }
+    setInterval(showToast, 12000); // Shows every 12 seconds
+</script>
 
 </body>
 </html>

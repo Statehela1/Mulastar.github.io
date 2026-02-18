@@ -304,6 +304,32 @@
     <a href="https://wa.me/254762461660" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50">
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
+    <section class="py-12 bg-white border-t border-b">
+    <div class="max-w-4xl mx-auto px-5 text-center">
+        <h4 class="text-xl font-bold mb-6">Invite Others & Earn Commissions</h4>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="whatsapp://send?text=Join Mulastar Agencies and earn daily! https://mulastar.github.io/" class="bg-green-500 text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-green-600 transition">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            
+            <button onclick="copyLink()" class="bg-gray-800 text-white px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-gray-900 transition">
+                <i class="fas fa-link"></i> <span id="copyText">Copy Link</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<script>
+function copyLink() {
+    const siteUrl = "https://statehela1.github.io/Mulastar.github.io/";
+    navigator.clipboard.writeText(siteUrl).then(() => {
+        const btnText = document.getElementById('copyText');
+        btnText.innerText = "Copied!";
+        setTimeout(() => { btnText.innerText = "Copy Link"; }, 2000);
+    });
+}
+</script>
+
     <footer class="bg-white shadow-inner mt-16 py-6 text-center text-gray-500 text-sm">
     &copy; 2026 Mulastar Agencies. All rights reserved.
 </footer>

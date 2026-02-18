@@ -6,7 +6,7 @@ Welcome to the official repository for **Mulastar Agencies**, the leading digita
 Check out the live website here: [https://statehela1.github.io/Mulastar.github.io/](https://statehela1.github.io/Mulastar.github.io/)
 
 ## 💰 About the Project
-This landing page is designed to help users in **Kenya, Uganda, Ghana, and Cameroon** learn how to earn daily through:
+This landing page is designed to help users in **Kenya, Uganda, Ghana, Nigeria, Malawi, Zambia, Tanzania, Rwanda, Burundi and Cameroon** learn how to earn daily through:
 * TikTok Video Watching
 * Paid Surveys & Trivia
 * Blogging & Content Creation
@@ -19,7 +19,7 @@ This landing page is designed to help users in **Kenya, Uganda, Ghana, and Camer
 * **JavaScript** - Interactive Earnings Calculator
 
 ## 📈 SEO Focus
-This project is optimized for keywords: *Mulastar Agencies Review, Mulastar App Download, and Online Earning Kenya.*
+This project is optimized for keywords: *Mulastar Agencies Review, Mulastar App Download, and Online Earning Kenya and available in all countries.*
 
 ---
 © 2026 Mulastar Agencies. All rights reserved.

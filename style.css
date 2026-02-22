@@ -51,4 +51,69 @@
         line-height: 1.6;
     }
 </style>
+<style>
+    .faq-title {
+        text-align: center;
+        color: #1a2a3a; /* Darker professional blue-black */
+        font-weight: 800; /* Extra Bold */
+        font-size: 2rem;
+        margin-bottom: 40px;
+        text-transform: uppercase; /* Optional: gives it a "Strong" agency look */
+        letter-spacing: 1px;
+    }
+
+    /* Adds a stylish small line under the bold title */
+    .faq-title::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: #3498db; /* Mulastar Blue */
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
+</style>
+<style>
+    /* Logo Styling */
+    .logo-container {
+        text-align: center;
+        padding: 20px 0;
+    }
+    .agency-logo {
+        max-width: 180px;
+        height: auto;
+    }
+
+    /* Gallery Grid */
+    .grid-container {
+        display: grid;
+        /* This magic line makes it responsive without media queries */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .grid-item {
+        overflow: hidden;
+        border-radius: 12px;
+        background: #f8f9fa;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease;
+    }
+
+    .grid-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .grid-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        /* Prevents layout shift */
+        aspect-ratio: 16 / 9; 
+    }
+</style>
 

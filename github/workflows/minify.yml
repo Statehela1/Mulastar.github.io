@@ -1,0 +1,24 @@
+name: Minify and Deploy
+on:
+  push:
+    branches:
+      - main  # Make sure this matches your branch name (usually 'main' or 'master')
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Minify HTML, CSS, and JS
+        uses: dra1ex/minify-action@v1.0.3
+        with:
+          directory: '.' # Minifies everything in your project
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages # This creates a 'clean' version on a new branch
